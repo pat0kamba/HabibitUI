@@ -1,0 +1,185 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style_1.css">
+  <title>Events Scheduling</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="Habibit_logo_small.png" alt="Logo" id="Habibit_logo">
+    </div>
+    <div class="nav-options">
+        <a href="Options.html">Home</a>
+        <a href="Contact.html">Contact</a>
+        <a href="About.html">About</a>
+        <a href="Landing.html">Signout</a>
+    </div>
+  </nav>
+<h1 class="title_name">Kitchen Services</h1>
+<div class="center-container">
+    The Kitchen page invites you to indulge in a culinary experience tailored to your preferences. Our thoughtfully curated menu is categorized into Starter, Main Course, Dessert, and Beverages, providing a comprehensive selection to satisfy your palate. Navigate through these delectable offerings, where you have the flexibility to choose the quantity of each item according to your event's needs. 
+As you make your culinary selections, please be informed that the billing for these items will be generated separately. Upon finalizing your choices, a detailed email with the itemized billing will be sent to you. We understand the importance of confirming your purchase, and as such, you will have the opportunity to review the billing information and confirm your order via email. 
+</div>
+<div class="menu-container">
+    <h1>Menu</h1>
+    <h3 class="sub_title">Starters</h3>
+    <ul class="menu-list">
+      <li>
+        <span class="food-name">Salad</span>
+        <span class="price">$15.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Soup</span>
+        <span class="price">$12.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <!-- Add more menu items as needed -->
+    </ul>
+
+    <h3 class="sub_title">Main Course</h3>
+    <ul class="menu-list">
+      <li>
+        <span class="food-name">Pizza</span>
+        <span class="price">$18.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Pasta</span>
+        <span class="price">$13.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Sushi</span>
+        <span class="price">$22.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <!-- Add more menu items as needed -->
+    </ul>
+        <h3 class="sub_title">Desert</h3>
+      <ul class="menu-list">
+      <li>
+        <span class="food-name">Cheesecake</span>
+        <span class="price">$8.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Ice Cream</span>
+        <span class="price">$5.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Brownies</span>
+        <span class="price">$6.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+
+      <h3 class="sub_title">Beverages</h3>
+      <ul class="menu-list">
+      <li>
+        <span class="food-name">Pepsei</span>
+        <span class="price">$2.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Coca Cola</span>
+        <span class="price">$2.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Sprite</span>
+        <span class="price">$2.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <li>
+        <span class="food-name">Water</span>
+        <span class="price">$1.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+          <span class="quantity-value">1</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        </div>
+      </li>
+      <!-- Add more menu items as needed -->
+    </ul>
+  </div>
+
+<div class="center-container">
+    <p>
+        Our commitment extends beyond offering a delightful culinary experience. We strive to provide you with a seamless and convenient process, ensuring that your event's dining arrangements are as enjoyable as the dishes themselves. For any specific dietary preferences or questions regarding our menu, our culinary team is ready to assist you. 
+
+We look forward to tantalizing your taste buds and contributing to the overall success of your event. Should you have any further inquiries or wish to discuss your culinary preferences in detail, feel free to reach out to our dedicated team: 
+
+ <a href="#">AbulHasan.Shaik@gmail.com</a>, <a href="#">patrick.kamba@jacks.sdstate.edu</a>, <a href="#">dane.wika@jacks.sdstate.edu</a>, <a href="#">munkhjin.chuluunkhuu@jacks.sdstate.edu.</a> 
+
+We are here to make your dining experience memorable and stress-free.Top of Form 
+    </p>
+  </div>
+
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Brookings Activity Center. All rights reserved.</p>
+      <p>Designed by <a href="#">Habibits Team</a></p>
+      <div class="social-media">
+        <a href="#" target="_blank" title="Facebook"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#" target="_blank" title="Twitter"><img src="twitter-2.png" alt="Twitter"></a>
+        <a href="#" target="_blank" title="Instagram"><img src="instagram-2.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

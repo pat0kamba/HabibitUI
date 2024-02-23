@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+  }
+  
+  .logo img {
+    max-height: 40px;
+  }
+  
+  .nav-options a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .menu-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .food-name,
+  .price,
+  .quantity {
+    flex: 1;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #009688;
+  }
+  
+  .quantity-btn {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .quantity-value {
+    margin: 0 10px;
+  }
+  .sub_title{
+    text-align: left;
+  }
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .equip_form{
+    width:60%;
+    margin:10px auto;
+  }
+
+  .elements{
+    display:flex;
+    justify-content:space-between;
+  }
+  
+  .submit-btn{
+    background-color:lightcoral;
+    border-radius:7px;
+  }
+
+  .center_title
+  {
+    text-align:center;
+  }
