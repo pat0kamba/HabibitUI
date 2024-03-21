@@ -107,6 +107,7 @@ body {
   .elements{
     display:flex;
     justify-content:space-between;
+    align-items:center;
   }
   
   .submit-btn{
@@ -117,4 +118,11 @@ body {
   .center_title
   {
     text-align:center;
+  }
+
+  .equip_title, .equip1, .equip2, .equip3, .equip4
+  {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
   }

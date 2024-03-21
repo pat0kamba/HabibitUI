@@ -100,4 +100,58 @@ document.addEventListener("DOMContentLoaded", function () {
   
     quantityElement.textContent = currentQuantity;
   }
+
   
+  // Handle Equipment checkbox
+  let checkbox1 = document.querySelector("input[id=toggle1]");
+
+  checkbox1.addEventListener('change', function(){
+      if (this.checked)
+      {
+        document.getElementById("status1").textContent = "Booked";
+      }
+      else
+      {
+        document.getElementById("status1").textContent = "Available";
+      }
+  });
+
+  let checkbox2 = document.querySelector("input[id=toggle2]");
+
+  checkbox2.addEventListener('change', function(){
+      if (this.checked)
+      {
+        document.getElementById("status2").textContent = "Booked";
+      }
+      else
+      {
+        document.getElementById("status2").textContent = "Available";
+      }
+  });
+
+  let checkbox3 = document.querySelector("input[id=toggle3]");
+
+  checkbox3.addEventListener('change', function(){
+      if (this.checked)
+      {
+        document.getElementById("status3").textContent = "Booked";
+      }
+      else
+      {
+        document.getElementById("status3").textContent = "Available";
+      }
+  });
+
+  let checkbox4 = document.querySelector("input[id=toggle4]");
+
+  checkbox4.addEventListener('change', function(){
+      if (this.checked)
+      {
+        document.getElementById("status4").textContent = "Booked";
+      }
+      else
+      {
+        document.getElementById("status4").textContent = "Available";
+      }
+  });
+
