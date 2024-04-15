@@ -1,36 +1,72 @@
 const express = require('express');
-
+const mongoose = require('mongoose');
+const loginRouter = require('./routes/login_route');
+const signupRouter = require('./routes/signup_route');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Successful response.');
+// app.get('/', (req, res) => {
+//   res.send('Successful response.');
+// });
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
+app.get('/', (req, res)=>{
+  res.sendFile('index.html');
+});
+app.get('/contact', (req, res)=>{
+  res.sendFile('Contact.html');
 });
 
-app.listen(3000, () => console.log('Example app is listening on port 3000.'));
-
-
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://danewika:10681@habitimdb.hra07pf.mongodb.net/?retryWrites=true&w=majority&appName=HabitiMDB";
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
+app.get('/equipment', (req, res)=>{
+  res.sendFile('/Equipment.html');
 });
 
-async function run() {
+
+app.get('/events', (req, res)=>{
+  res.sendFile(__dirname+'/Events.html');
+});
+
+app.get('/kitchen', (req, res)=>{
+  res.sendFile(__dirname+'/Kitchen.html');
+});
+
+app.get('/options', (req, res)=>{
+  res.sendFile(__dirname+'/Options.html');
+});
+
+app.get('/room', (req, res)=>{
+  res.sendFile(__dirname+'/Rooms.html');
+});
+
+app.get('/followup', (req, res)=>{
+  res.sendFile(__dirname+'/FollowUp.html');
+});
+app.use(express.json());
+
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter); 
+
+app.listen(3000, () => console.log('The app is listening on port 3000.'));
+
+//const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://pkamba1804:kyvbap-6ninjy-qixmUv@cluster0.fsqge8h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+async function connect() {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
+    await mongoose.connect(uri);
+    console.log("Connected to MongoDB!");
+    
+  } catch(error) {
+   
+    console.log(error);
   }
 }
-run().catch(console.dir);
+connect();
+
+// Serving Html pages
+
+//mongodb+srv://pkamba342:PoiQwe1234@cluster0.aesdv0t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+// Connection string
+// mongodb+srv://pkamba342:<password>@cluster0.aesdv0t.mongodb.net/
+// Password:
+//kyvbap-6ninjy-qixmUv
+// mongodb+srv://pkamba1804:kyvbap6ninjyqixmUv@cluster0.fsqge8h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
