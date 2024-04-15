@@ -8,11 +8,10 @@ app.get('/', (req, res) => {
   res.send('Successful response.');
 });
 
-app.listen(3000, () => console.log('Example app is listening on port 3000.'));
-
+app.listen(4000, () => console.log('Example app is listening on port 4000.'));
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://danewika:10681@habitimdb.hra07pf.mongodb.net/?retryWrites=true&w=majority&appName=HabitiMDB";
+const uri = "mongodb+srv://danewika:8s4G7V4oNgXyZU5q@habitidb1.kqbnzlk.mongodb.net/?retryWrites=true&w=majority&appName=HabitiDB1";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -22,6 +21,7 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
+
 
 async function run() {
   try {

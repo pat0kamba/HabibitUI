@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Login in page implmentation
 const userSchema = new mongoose.Schema({
     Firstname:{
         type:String,
@@ -20,3 +21,29 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('User', userSchema);
+
+//event page implementation
+const eventSchema = new mongoose.Schema({
+    Title:{
+        type:String,
+        required:true
+    },
+    Description:{
+        type:String,
+        required:true
+    },
+    Date:{
+        type:String,
+        required:true
+    },
+    Time:{
+        type:String,
+        required:true
+    },
+    Equipment:{
+        type:String,
+        required:true
+    }
+});
+
+module.exports = mongoose.model('Event', eventSchema);
