@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const { MongoClient } = require('mongodb');
 
 // Connection URI
-const uri = "mongodb+srv://danewika:10681@habitimdb.hra07pf.mongodb.net/?retryWrites=true&w=majority&appName=HabitiMDB";
+const uri = "mongodb+srv://danewika:8s4G7V4oNgXyZU5q@habitidb1.kqbnzlk.mongodb.net/?retryWrites=true&w=majority&appName=HabitiDB1";
 
 // Database Name
 const dbName = 'Webpage';
