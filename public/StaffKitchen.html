@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style_1.css">
+  <title>Chef's Kitchen</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="images/Habibit_logo_small.png" alt="Logo" id="Habibit_logo">
+    </div>
+    <div class="nav-options">
+        <a href="Options.html">Home</a>
+        <a href="Contact.html">Contact</a>
+        <a href="About.html">About</a>
+        <a href="index.html">Signout</a>
+    </div>
+  </nav>
+
+  <h1 class="title_name">Chef's Kitchen Orders</h1>
+
+  <div class="center-container">
+    <p>Welcome to the Chef's Kitchen, where culinary creativity meets exceptional taste. Below are links to some delicious recipes handpicked by our expert chefs.</p>
+  </div>
+
+  <div class="menu-container">
+    <h1>Recipes</h1>
+
+    <h3 class="sub_title">Starters</h3>
+    <ul class="menu-list">
+      <li>
+        <a href="https://foodie.sysco.com/recipes/spa-salad/" target="_blank">Salad</a>
+        <span class="price">$15.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://foodie.sysco.com/recipes/thai-curry-sweet-potato-soup/" target="_blank">Soup</a>
+        <span class="price">$12.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <!-- Add more starter recipes as needed -->
+    </ul>
+
+    <h3 class="sub_title">Main Course</h3>
+    <ul class="menu-list">
+      <li>
+        <a href="https://foodie.sysco.com/recipes/pancetta-heirloom-tomato-arugula-pizza/" target="_blank">Pizza</a>
+        <span class="price">$18.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://foodie.sysco.com/recipes/vegan-penne-bolognese/" target="_blank">Pasta</a>
+        <span class="price">$13.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://foodie.sysco.com/recipes/flame-seared-pork-belly-pressed-sushi-with-scallion-rice-and-pickled-ginger-aioli/" target="_blank">Sushi</a>
+        <span class="price">$22.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <!-- Add more main course recipes as needed -->
+    </ul>
+
+    <h3 class="sub_title">Dessert</h3>
+    <ul class="menu-list">
+      <li>
+        <a href="https://foodie.sysco.com/recipes/caramel-apple-cheesecake-with-chocolate-root-beer-sauce-salty-peanut-ginger-brittle/" target="_blank">Cheesecake</a>
+        <span class="price">$8.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://foodie.sysco.com/recipes/peaches-and-cream-trio/" target="_blank">Ice Cream</a>
+        <span class="price">$5.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.example.com/dessert/brownies_recipe.html" target="_blank">Brownies</a>
+        <span class="price">$6.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <!-- Add more dessert recipes as needed -->
+    </ul>
+
+    <h3 class="sub_title">Beverages</h3>
+    <ul class="menu-list">
+      <li>
+        <a href="https://www.example.com/beverages/pepsi_recipe.html" target="_blank">Pepsi</a>
+        <span class="price">$2.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.example.com/beverages/coca_cola_recipe.html" target="_blank">Coca Cola</a>
+        <span class="price">$2.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.example.com/beverages/sprite_recipe.html" target="_blank">Sprite</a>
+        <span class="price">$2.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <li>
+        <a href="https://www.example.com/beverages/water_recipe.html" target="_blank">Water</a>
+        <span class="price">$1.99</span>
+        <div class="quantity">
+          <button class="quantity-btn" onclick="changeQuantity(this, -1)">- Compete Item</button>
+          <span class="quantity-value">0</span>
+          <button class="quantity-btn" onclick="changeQuantity(this, 1)">+ New Item</button>
+        </div>
+      </li>
+      <!-- Add more beverage recipes as needed -->
+    </ul>
+  </div>
+
+  <div class="center-container">
+    <p>If you have any questions or need assistance with the recipes, don't hesitate to contact our culinary team:</p>
+    <ul>
+      <li><a href="mailto:chef@example.com">chef@example.com</a></li>
+      <!-- Add more contact emails as needed -->
+    </ul>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Chef's Kitchen. All rights reserved.</p>
+      <p>Designed by <a href="#">Your Team Name</a></p>
+      <div class="social-media">
+        <a href="#" target="_blank" title="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#" target="_blank" title="Twitter"><img src="images/twitter-2.png" alt="Twitter"></a>
+        <a href="#" target="_blank" title="Instagram"><img src="images/instagram-2.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function changeQuantity(element, delta) {
+      const quantityElement = element.parentElement.querySelector('.quantity-value');
+      let quantity = parseInt(quantityElement.textContent);
+      quantity += delta;
+      if (quantity < 0) {
+        quantity = 0;
+      }
+      quantityElement.textContent = quantity;
+    }
+  </script>
+</body>
+
+</html>
